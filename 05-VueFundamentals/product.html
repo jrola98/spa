@@ -4,7 +4,17 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-  <h1>Grades</h1>    
+  <h1>Grades</h1>
+  <div id=app>
+    <h2>Receipt</h2>
+    <p>---------------------------------</p>
+    <p>Name: {{ product.name }}</p>
+    <p>Unit price: {{ product.unitPrice }}</p>
+    <p>Quantity: {{ product.quantity }}</p>
+    <p>VAT: {{ product.VAT }}%</p>
+    <p>===================</p>
+    <p>Total: {{ (product.unitPrice*product.quantity*(product.VAT/100)).toFixed(2) }}</p>
+  </div>    
 
   <script>
     var app = new Vue({
