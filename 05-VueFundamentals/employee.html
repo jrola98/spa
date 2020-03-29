@@ -4,6 +4,17 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+<div id=app>
+  <h3>EMPLOYEE RECORD</h3>
+  <p>Name1: {{ name1 }}</p>
+  <p>Name2: {{ name2 }}</p>
+  <p>Surname: {{ surname }}</p>
+  <p v-if="foreigner === false">PESEL: {{ pesel }}</p>
+  <p v-else>Nationality: {{ nationality }}</p>
+  <p>Address: {{ address }}</p>
+</div>
+
+
   <script>
     var app = new Vue({
       el: '#app',
@@ -15,6 +26,7 @@
         nationality: 'Polish',
         pesel: '92021708229',
         address: 'ul. Szeroka 3, Kraków',
+      }
     });
   </script>
 
